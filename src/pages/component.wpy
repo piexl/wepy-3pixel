@@ -1,0 +1,42 @@
+<template>
+  <view class="page">
+    <view class="weui-flex">
+        <button
+          class="weui-btn"
+          type="default"
+          @tap="add"
+          size="mini"><text class="iconfont icon-add"></text></button>
+        <view class="weui-flex__item"><view class="placeholder">{{defeatNum}}</view></view>
+        <button
+          class="weui-btn"
+          type="default"
+          @tap="subtract"
+          size="mini"><text class="iconfont icon-subtract"></text></button>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Component extends wepy.page {
+    config = {
+      navigationBarTitleText: '组件'
+    }
+    data = {
+      defeatNum:1
+    }
+    methods = {
+      add() {
+        this.defeatNum++
+      },
+      subtract() {
+        this.defeatNum--
+      }
+    }
+  }
+</script>
+<style lang="less">
+.weui-panel{
+  width:100%;
+}
+</style>

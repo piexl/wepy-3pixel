@@ -1,0 +1,11 @@
+#npm
+node_modules
+
+
+#打包文件
+dist
+
+
+#打包web
+wewebTmp
+

@@ -1,0 +1,121 @@
+<template>
+  <view class="page">
+    <view class="icons-list">
+      <repeat for="{{icons}}" key="index" index="index" item="item">
+        <view class="icons-item">
+          <text class="iconfont {{item}}"></text>
+        </view>
+      </view>
+      </repeat>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Search extends wepy.page {
+    data = {
+      icons: [
+        'icon-all',
+        'icon-back',
+        'icon-cart',
+        'icon-category',
+        'icon-close',
+        'icon-comments',
+        'icon-cry',
+        'icon-delete',
+        'icon-edit',
+        'icon-email',
+        'icon-favorite',
+        'icon-form',
+        'icon-help',
+        'icon-information',
+        'icon-less',
+        'icon-moreunfold',
+        'icon-more',
+        'icon-pic',
+        'icon-qrcode',
+        'icon-refresh',
+        'icon-rfq',
+        'icon-search',
+        'icon-selected',
+        'icon-set',
+        'icon-smile',
+        'icon-success',
+        'icon-survey',
+        'icon-training',
+        'icon-viewgallery',
+        'icon-viewlist',
+        'icon-warning',
+        'icon-wrong',
+        'icon-account',
+        'icon-add',
+        'icon-atm',
+        'icon-clock',
+        'icon-remind',
+        'icon-calendar',
+        'icon-attachment',
+        'icon-discount',
+        'icon-service',
+        'icon-print',
+        'icon-box',
+        'icon-process',
+        'icon-beauty',
+        'icon-electrical',
+        'icon-home',
+        'icon-electronics',
+        'icon-gifts',
+        'icon-lights',
+        'icon-sports',
+        'icon-toys',
+        'icon-auto',
+        'icon-jewelry',
+        'icon-trade-assurance',
+        'icon-browse',
+        'icon-rfqqm',
+        'icon-rfqquantity',
+        'icon-atmaway',
+        'icon-rfq1',
+        'icon-scanning',
+        'icon-compare',
+        'icon-filter',
+        'icon-pin',
+        'icon-history',
+        'icon-productfeatures',
+        'icon-supplierfeatures',
+        'icon-similarproduct',
+        'icon-link',
+        'icon-cut',
+        'icon-navlist',
+        'icon-imagetext',
+        'icon-text',
+        'icon-move',
+        'icon-subtract',
+        'icon-dollar',
+        'icon-raw',
+        'icon-office'
+      ]
+    }
+  }
+</script>
+<style lang="less">
+.page{
+  padding:20rpx;
+}
+.icons-list{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .icons-item{
+    width:100%/8;
+    text-align:center;
+    color:#45adc6;
+    .iconfont{
+      font-size:20px;
+    }
+  }
+}
+</style>

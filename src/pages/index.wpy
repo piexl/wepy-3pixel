@@ -1,0 +1,53 @@
+
+<template>
+  <view class="page">
+    <searchbar >
+      <view>
+          <text>这是我放到的内容</text>
+      </view>
+      <view slot="title">Panel的Title</view>
+    </searchbar>
+    <swiperBanner />
+    <view class="weui-panel">
+      <view class="weui-cells weui-cells_after-title">
+          <navigator url="demo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">wepy-demo</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">wepy示例demo</view>
+          </navigator>
+          <navigator url="icons" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">icons</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">阿里图标字体库</view>
+          </navigator>
+          <navigator url="component" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">组件讲解</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">组件中一些概念</view>
+          </navigator>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import Searchbar from '../components/search'
+  import SwiperBanner from '../components/swiperBanner'
+  //import interfaces from '../utils/login_relogin'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '3pixel'
+    }
+    components = {
+      searchbar: Searchbar,
+      swiperBanner: SwiperBanner
+    }
+    async onLoad() {
+      //await interfaces.login()
+    }
+  }
+</script>
+<style lang="less">
+.weui-panel{
+  width:100%;
+}
+</style>

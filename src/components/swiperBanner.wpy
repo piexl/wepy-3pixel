@@ -1,0 +1,49 @@
+<template>
+  <view class="swiper-box">
+    <swiper
+      class="swiper"
+      autoplay="true"
+      interval="5000"
+      bindchange="swiperChange"
+      indicator-dots="true"
+      indicator-active-color="#45adc6"
+      duration="500">
+      <repeat for="{{swiperData}}" key="index" index="index" item="item">
+        <swiper-item>
+          <image src="{{item}}" mode="aspectFill" class="img"/>
+        </swiper-item>
+      </repeat>
+    </swiper>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+  export default class SwiperBanner extends wepy.component {
+    data = {
+      swiperData: [
+        'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+        'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      ]
+    }
+    methods = {
+      swiperChange (event) {
+        console.log('swiper-current', event.detail.current)
+      }
+    }
+    onLoad() {
+    }
+  }
+</script>
+<style lang="less">
+  .swiper-box{
+    width:100%;
+    .swiper{
+      width:100%;
+      height:220px;
+      .img{
+        width:100%;
+      }
+    }
+  }
+</style>
