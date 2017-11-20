@@ -1,12 +1,7 @@
 
 <template>
   <view class="page">
-    <searchbar >
-      <view>
-          <text>这是我放到的内容</text>
-      </view>
-      <view slot="title">Panel的Title</view>
-    </searchbar>
+    <searchbar />
     <swiperBanner />
     <view class="weui-panel">
       <view class="weui-cells weui-cells_after-title">
@@ -31,7 +26,7 @@
   import wepy from 'wepy'
   import Searchbar from '../components/search'
   import SwiperBanner from '../components/swiperBanner'
-  //import interfaces from '../utils/login_relogin'
+  import interfaces from '../utils/login_relogin'
 
   export default class Index extends wepy.page {
     config = {
@@ -42,7 +37,7 @@
       swiperBanner: SwiperBanner
     }
     async onLoad() {
-      //await interfaces.login()
+      await interfaces.login()
     }
   }
 </script>
